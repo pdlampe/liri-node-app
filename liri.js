@@ -15,7 +15,6 @@ var spotify = new Spotify(keys.spotify);
 
 var getArtistInfo = function (artist) {
     return artist.name;
-    console.log(artist.name)
 }
 
 var getSpotify = function (songName) {
@@ -33,8 +32,20 @@ var getSpotify = function (songName) {
                 console.log("The following error occured:" + err);
                 return;
             }
+            var songs = data.tracks.items;
+
+            for (var i = 0; i < songs.length; i++) {
+                console.log(i);
+                console.log("Artist(s): " + songs[i].artists.map(getArtistNames));
+                console.log("Song name: " + songs[i].name);
+                console.log("Preview song: " + songs[i].preview_url);
+                console.log("Album: " + songs[i].album.name);
+                console.log("-----------------------------------");
+            }
+
 
         }
 
+    );
 
-    )
+};
