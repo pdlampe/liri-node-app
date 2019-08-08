@@ -2,7 +2,7 @@ require("dotenv").config();
 
 var keys = require("./keys.js");
 var Spotify = require('node-spotify-api');
-var log = require('simple-node-log').createSimpleFileLogger(filename); log.setLevel('all');
+
 
 var firstCommand = process.argv[2];
 var secondCommand = process.argv[3];
@@ -19,7 +19,7 @@ var getArtistInfo = function (artist) {
 
 var getSpotify = function (songName) {
     if (songName === undefined) {
-        songName = "Take on me";
+        songName = "The Sign";
     }
 
     spotify.search(
@@ -49,3 +49,21 @@ var getSpotify = function (songName) {
     );
 
 };
+
+function userSwitch(userCommand) {
+    switch (userCommand) {
+        case "spotify-this-song":
+            getSpotify();
+            break;
+
+        case "movie-this":
+            getMovie();
+            break;
+
+        case "do-what-it-says":
+            doWhat();
+            break;
+
+    }
+
+}
