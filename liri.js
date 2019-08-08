@@ -103,7 +103,57 @@ function findMovie() {
 
     });
 
+    function findConcert(parameter) {
+
+        if ('concert-this') {
+            var artist = "";
+            for (var i = 3; i < process.argv.length; i++) {
+                artist += process.argv[i];
+            }
+            let bandsFig = "Bandsintown"
+            figlet(bandsFig, function (err, data) {
+                if (err) {
+                    console.log('Something went wrong...');
+                    console.dir(err);
+                    return;
+                }
+                console.log(chalk.green(data));
+            });
+
+        }
+        else {
+            artist = parameter;
+        }
+
+        var queryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
+
+        request(queryUrl, function (error, response, body) {
+
+            if (!error && response.statusCode === 200) {
+
+                var JS = JSON.parse(body);
+                for (i = 0; i < JS.length; i++) {
+                    var dateTime = JS[i].datetime;
+                    var month = dateTime.substring(5, 7);
+                    var year = dateTime.substring(0, 4);
+                    var day = dateTime.substring(8, 10);
+                    var dateForm = month + "/" + day + "/" + year
+
+
+                    console.log("Name: " + JS[i].venue.name);
+                    console.log("City: " + JS[i].venue.city);
+                    if (JS[i].venue.region !== "") {
+                        console.log("Country: " + JS[i].venue.region);
+                    }
+                    console.log("Country: " + JS[i].venue.country);
+                    console.log("Date: " + dateForm);
+
+
+                }
+            }
+        });
+
+    }
+
 }
-
-
 mySwitch(userCommand);
