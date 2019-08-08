@@ -5,7 +5,6 @@ var Spotify = require('node-spotify-api');
 
 
 var firstCommand = process.argv[2];
-var secondCommand = process.argv[3];
 
 for (var i = 4; i < process.argv.length; i++) {
     secondCommand += '+' + process.argv[i];
