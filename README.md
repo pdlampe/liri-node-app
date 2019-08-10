@@ -77,4 +77,7 @@ node_modules
     * doCommand
 
 * Here is a breakdown of the various package and API based functions. 
-    -
+    * For the Spotify function:
+        * Use gotoSpotify variable as your paramater.
+        * If the variable is undefined, return "The Sign" by "Ace of Base." 
+        * 
