@@ -40,11 +40,11 @@ The user can follow similar steps to search for movie information or concert inf
 
 <h4>While I have not been able to get the application to function as desired, I have typed out an explanation of how I developed this application and how the application should function. </h4>
 
--Initite GitHub repository for project titled "liri-node-app"
+* Initite GitHub repository for project titled "liri-node-app"
 
--Create a package.json file by typing npm init
+* Create a package.json file by typing npm init
 
--Create a .gitignore file with the following three lines so they won't be committed to Github. 
+* Create a .gitignore file with the following three lines so they won't be committed to Github. 
 
 ``` 
 node_modules
@@ -53,27 +53,28 @@ node_modules
 
 ```
 
--Create liri.js
--Create keys.js
+* Create liri.js
+* Create keys.js
     - Hide the Spotify keys in keys.js.
--Create a .env file. This file stores the spotify API keys. 
--Create a random.txt file 
+* Create a .env file. This file stores the spotify API keys. 
+* Create a random.txt file 
 
--In liri.js install the following packages...
-    -dotenv
-    -fs
-    -node-spotify-api
-    -axios
-    -moment
+* In liri.js install the following packages...
+    * dotenv
+    * fs
+    * node-spotify-api
+    * axios
+    * moment
 
--Initiate the app with the spotify functionality
+* Initiate the app with the spotify functionality
 
--Create the userSwitch function, so the user can navigate between the various commands. 
+* Create the userSwitch function, so the user can navigate between the various commands. 
 
--userSwitch function includes the following functionality:
-    -findConcert
-    -gotoSpotify
-    -findMovie
-    -doCommand
+* userSwitch function includes the following functionality:
+    * findConcert
+    * gotoSpotify
+    * findMovie
+    * doCommand
 
--Here is a breakdown of the 
+* Here is a breakdown of the various package and API based functions. 
+    -
