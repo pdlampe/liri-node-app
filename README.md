@@ -80,4 +80,22 @@ node_modules
     * For the Spotify function:
         * Use gotoSpotify variable as your paramater.
         * If the variable is undefined, return "The Sign" by "Ace of Base." 
-        * 
+        * Search Spotif API and return the artist information, song name, a preview song URL and the album information. 
+        * Console.log this information to teh terminal. 
+    * For the omdb/find movie function::
+        * Use queryURL to search the OMDB API. 
+        * Set a findMovie variable as the paramter. 
+        * If no movie is entered, return "Mr. Nobody" informtion from IMDB database. 
+        * When the user request information from OMDB, the API should return title, Rotten Tomatoes rating, IMdB rating, country for movie production, plot information, main actors and the language for the film. 
+        * Console.log this information to the terminal. 
+    * For the Bands in Town function:
+        * Establish findConcert as the function. 
+        * If not informtion is included in the search, send "Something went wrong.." message back to user in the terminal 
+        * Use queryURL to search Bands in Town API and database.  
+        * Search for concert name, city, country and date. 
+        * Console.log this information to the terminal. 
+    * For the doCommand() function, read and return information in random.txt by utilizing if statements. 
+
+    * Call the userSwitch() to move between API and package functions. 
+
+
